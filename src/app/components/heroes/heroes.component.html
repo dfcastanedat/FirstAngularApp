@@ -1,1 +1,21 @@
-<p>heroes works!</p>
+<h1 class="title">Héroes Marvel/DC</h1>
+
+<div class="card-columns base">
+  <div class="card" *ngFor="let heroe of heroes; let i = index">
+    <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre" />
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text">
+        <small class="text-muted">{{ heroe.aparicion }}</small>
+      </p>
+      <button
+        (click)="verHeroe(i)"
+        type="button"
+        class="btn btn-dark btn-block"
+      >
+        Ver más
+      </button>
+    </div>
+  </div>
+</div>
