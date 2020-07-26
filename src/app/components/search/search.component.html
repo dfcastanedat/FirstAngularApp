@@ -1,5 +1,5 @@
-<h1 class="title">Héroes Marvel/DC</h1>
-
+<h1 class="title" *ngIf="!(heroes.length == 0)">Resultados de la búsqueda</h1>
+<h1 class="title" *ngIf="heroes.length == 0">No hay resultados</h1>
 <div class="card-columns base">
   <app-card
     *ngFor="let heroe of heroes; let i = index"
